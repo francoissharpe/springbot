@@ -12,3 +12,5 @@ def test_initial_team_created_from_id(init_db):
     teams = Team.query.get(1)
     assert teams.name == 'South Africa'
     assert teams.id == 1
+
+
