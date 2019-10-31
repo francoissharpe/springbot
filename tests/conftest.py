@@ -31,3 +31,4 @@ def test_client_with_db(test_client):
     db.session.commit()
     yield test_client
     db.drop_all()
+
