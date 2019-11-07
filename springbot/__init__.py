@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
+from config import Config
 
 
 db = SQLAlchemy()
@@ -8,8 +9,8 @@ ma = Marshmallow()
 
 
 def create_app(config_filename=None):
-    app = Flask(__name__, instance_relative_config=True)
-    app.config.from_pyfile(config_filename)
+    app = Flask(__name__)
+    app.config.from_object(Config())
     initialize_extensions(app)
     register_blueprints(app)
     return app
