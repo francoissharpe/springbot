@@ -1,4 +1,4 @@
-from springbot.models.teams import Team
+from springbot.api.teams.models import Team
 
 
 def test_initial_team_created_from_collection(init_db):
