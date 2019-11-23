@@ -1,10 +1,10 @@
+from marshmallow import fields
 from springbot import ma
-from springbot.api.teams.models import Team
 
 
-class TeamSchema(ma.ModelSchema):
-    class Meta:
-        model = Team
+class TeamSchema(ma.Schema):
+    id = fields.Integer(dump_only=True)
+    name = fields.String(required=True)
 
 
 team_schema = TeamSchema()

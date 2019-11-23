@@ -2,7 +2,6 @@ import pytest
 from springbot import create_app, db
 from springbot.api.teams.models import Team
 from springbot.api.players.models import Player
-from config import Config
 
 
 @pytest.fixture(scope='module')
