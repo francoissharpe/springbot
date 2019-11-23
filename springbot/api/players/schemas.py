@@ -1,10 +1,14 @@
+from marshmallow import fields
 from springbot import ma
-from springbot.api.players.models import Player
 
 
-class PlayerSchema(ma.ModelSchema):
-    class Meta:
-        model = Player
+class PlayerSchema(ma.Schema):
+    id = fields.Integer(dump_only=True)
+    name = fields.String(required=True)
+    full_name = fields.String(required=False)
+    birthday = fields.DateTime(required=False)
+    height = fields.Float(required=False)
+    weight = fields.Float(required=False)
 
 
 player_schema = PlayerSchema()

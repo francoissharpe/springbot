@@ -2,12 +2,11 @@ import pytest
 from springbot import create_app, db
 from springbot.api.teams.models import Team
 from springbot.api.players.models import Player
-from config import Config
 
 
 @pytest.fixture(scope='module')
 def test_client():
-    flask_app = create_app(Config())
+    flask_app = create_app()
     testing_client = flask_app.test_client()
     ctx = flask_app.app_context()
     ctx.push()

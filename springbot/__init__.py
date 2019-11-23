@@ -8,7 +8,7 @@ db = SQLAlchemy()
 ma = Marshmallow()
 
 
-def create_app(config_filename=None):
+def create_app():
     app = Flask(__name__)
     app.config.from_object(Config())
     initialize_extensions(app)
