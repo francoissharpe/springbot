@@ -20,7 +20,7 @@ pluggy==0.13.1
 psycopg2-binary==2.8.4
 py==1.8.0
 pyparsing==2.4.5
-pytest==5.3.0
+pytest==5.3.1
 pytest-cov==2.8.1
 pytz==2019.3
 six==1.13.0
