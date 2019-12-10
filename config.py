@@ -3,6 +3,7 @@ import random
 import string
 
 
+# test that auto merge and branche deletion works
 class Config:
     BASE_DIR = os.path.abspath(os.path.dirname(__file__))
     SECRET_KEY = os.environ.get("SECRET_KEY",
