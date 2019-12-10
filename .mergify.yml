@@ -5,7 +5,4 @@ pull_request_rules:
     actions:
       merge:
         method: merge
-  - name: delete merged branch
-    conditions: []
-    actions:
       delete_head_branch: {}
